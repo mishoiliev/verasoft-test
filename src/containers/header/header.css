@@ -1,0 +1,65 @@
+.star-icon {
+    top: 0;
+left: 0;
+width: 3em;
+height: 3em;
+margin-top: 2em;
+text-align: left;
+font: normal normal 300 3em/3em Font Awesome 5 Pro;
+letter-spacing: 0px;
+color: #AAAAAA;
+opacity: 1;
+}
+
+.star-icon path {
+    width: 1em;
+    height: 1em;
+}
+
+.header-wrapper {
+    padding: 1em;
+    /* top: 0px;
+left: 0px;
+width: 1165px;
+height: 1400px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1; */
+}
+
+.new-order-button {
+    float: right;
+    top: 16px;
+    left: 950px;
+    width: 200px;
+    height: 40px;
+    background: #404040 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.new-order-button span {
+    top: 26px;
+    left: 1006px;
+    width: 88px;
+    height: 20px;
+    text-align: center;
+    font: normal normal normal 18px/21px Arial;
+    letter-spacing: 0px;
+    color: #FCFEFF;
+    opacity: 1;
+}
+
+.username {
+    justify-content: center;
+    text-align: center;
+    vertical-align:middle;
+    top: 20px;
+    left: 60px;
+    width: 158px;
+    height: 34px;
+    text-align: left;
+    font: normal normal 600 2em/2em Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
