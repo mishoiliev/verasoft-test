@@ -11,6 +11,7 @@ export const SET_SMS_NUM = 'SET_SMS_NUM';
 export const SET_EMAILS_NUM = 'SET_EMAILS_NUM';
 export const SET_ORDERS_NUM = 'SET_ORDERS_NUM';
 export const SET_SMS_STATUS = 'SET_SMS_STATUS';
+export const SAGA_SET_HEADER_DATA = 'SAGA_SET_HEADER_DATA';
 
 export const SET_HEADER_DATA = 'SET_HEADER_DATA';
 
@@ -20,5 +21,7 @@ export const SET_ORDERS_AA = 'SET_ORDERS_AA';
 export const SET_ORDERS_AAA = 'SET_ORDERS_AAA';
 export const SET_ORDERS_B = 'SET_ORDERS_B';
 export const SET_ORDERS_C = 'SET_ORDERS_C';
+export const SAGA_SET_ORDERS_DATA = 'SAGA_SET_ORDERS_DATA';
+export const SET_SELECTED_ORDER = 'SET_SELECTED_ORDER';
 
 export const SET_ORDER_DATA = 'SET_ORDER_DATA';

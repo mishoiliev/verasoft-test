@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="App" >
+      <div className="App" style={{ padding: '1vw' }}>
         <Header />
         <Orders />
       </div>

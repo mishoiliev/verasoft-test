@@ -1,4 +1,4 @@
-import { SET_HEADER_DATA, SET_ORDER_DATA } from '../constants';
+import { SAGA_SET_HEADER_DATA, SAGA_SET_ORDERS_DATA, SET_HEADER_DATA, SET_ORDER_DATA, SET_SELECTED_ORDER } from '../constants';
 import {
     SET_FIRST_NAME,
     SET_LAST_NAME,
@@ -14,7 +14,28 @@ import {
     SET_SMS_STATUS,
 } from '../constants';
 
+export function sagaSetHeaderData() {
+    return {
+        type: SAGA_SET_HEADER_DATA,
+    }
+}
+
+export function sagaSetOrdersData() {
+    return {
+        type: SAGA_SET_ORDERS_DATA,
+    }
+}
+
+export function setSelectedOrder(order) {
+    return {
+        type: SET_SELECTED_ORDER,
+        payload: order
+    }
+}
+
+
 export function setHeaderData(data) {
+    console.log('setting header data');
     return {
         type: SET_HEADER_DATA,
         payload: data,
