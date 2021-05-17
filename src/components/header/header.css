@@ -67,7 +67,7 @@
 .user-info-wrapper {
     padding-top: 0.3em;
     display: flex;
-    height: 9em;
+    height: 125px;
 }
 
 .user-profile {
@@ -164,7 +164,7 @@
     width: 100%;
     text-align: center;
     vertical-align: middle;
-    font: normal normal 300 60px/68px Open Sans;
+    font: normal normal 600 60px/68px Open Sans;
     color: #333333;
     background: #EDF5FF 0% 0% no-repeat padding-box;
     opacity: 1;

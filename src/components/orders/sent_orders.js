@@ -43,9 +43,16 @@ class SentOrders extends React.Component {
                 }
                 {
                     orders[selectedOrder].length != 0 || orders[selectedOrder].sent
-                        ? orders[selectedOrder].sent.map(obj => {
+                        ? orders[selectedOrder].sent.map((obj, index) => {
                             return (
-                                <div className='order-wrapper'>
+                                <div
+                                    className='order-wrapper'
+                                    style={
+                                        index % 2 == 1
+                                            ? { background: '#F2F4F7 0% 0% no-repeat padding-box', opacity: '1' }
+                                            : { background: '' }
+                                    }
+                                >
                                     <div className='date-n-time'>
                                         {this.getDate(obj.sent_dt)}<br />
                                         {this.getHours(obj.sent_tm)}
@@ -61,7 +68,7 @@ class SentOrders extends React.Component {
                                         {obj.order_id}
                                     </div>
                                     <div>
-                                        <button id='resend-button'>RESEND</button>
+                                        <button id='resend-button' onClick={() => alert('RESEND order')}>RESEND</button>
                                     </div>
                                 </div>
                             )

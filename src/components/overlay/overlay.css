@@ -1,0 +1,39 @@
+.overlay {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000 0% 0% no-repeat padding-box;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+.overlay-close {
+    all: unset;
+    color: white;
+    margin-left: 95vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: end;
+    opacity: 1;
+    background: transparent;
+}
+
+.overlay-loader-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 35vh;
+}
+
+#processing {
+    color: white;
+    height: 1%;
+    margin-top: 2%;
+}

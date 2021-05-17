@@ -26,3 +26,6 @@ export const SET_SELECTED_ORDER = 'SET_SELECTED_ORDER';
 export const CHANGE_LOADING = 'CHANGE_LOADING';
 
 export const SET_ORDER_DATA = 'SET_ORDER_DATA';
+
+//Overlay constants
+export const SET_OVERLAY_VISIBLE = 'SET_OVERLAY_VISIBLE';

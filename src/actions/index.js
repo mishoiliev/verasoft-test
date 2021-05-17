@@ -1,4 +1,4 @@
-import { CHANGE_LOADING, SAGA_SET_HEADER_DATA, SAGA_SET_ORDERS_DATA, SET_HEADER_DATA, SET_ORDER_DATA, SET_SELECTED_ORDER } from '../constants';
+import { CHANGE_LOADING, SAGA_SET_HEADER_DATA, SAGA_SET_ORDERS_DATA, SET_HEADER_DATA, SET_ORDER_DATA, SET_OVERLAY_VISIBLE, SET_SELECTED_ORDER } from '../constants';
 import {
     SET_FIRST_NAME,
     SET_LAST_NAME,
@@ -46,6 +46,14 @@ export function changeLoading(bool) {
     console.log('changes loadings');
     return {
         type: CHANGE_LOADING,
+        payload: bool,
+    }
+}
+
+export function setOverlayVisible(bool) {
+    console.log('changes loadings');
+    return {
+        type: SET_OVERLAY_VISIBLE,
         payload: bool,
     }
 }

@@ -7,7 +7,7 @@ import { VscHome } from 'react-icons/vsc'
 import './header.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
-import { sagaSetHeaderData } from '../../actions';
+import { sagaSetHeaderData, setOverlayVisible } from '../../actions';
 import '../../app.css';
 
 class Header extends React.Component {
@@ -49,7 +49,7 @@ class Header extends React.Component {
                         <span className='username'>{header.first_name} {header.last_name}</span>
                         <button
                             className='new-order-button'
-                            onClick={() => alert('Adds new order')}
+                            onClick={() => this.props.setOverlayVisible(true)}
                         >
                             <span>New Order</span>
                         </button>
@@ -127,12 +127,14 @@ class Header extends React.Component {
 const mapStateToProps = state => {
     return {
         header: state.header,
+        overlay: state.overlay
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        sagaSetHeaderData: (data) => { dispatch(sagaSetHeaderData(data)) }
+        sagaSetHeaderData: (data) => dispatch(sagaSetHeaderData(data)),
+        setOverlayVisible: (bool) => dispatch(setOverlayVisible(bool)),
     }
 }
 

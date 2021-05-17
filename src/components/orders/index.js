@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './orders.css';
-import { changeLoading, sagaSetOrdersData, setOrdersData, setSelectedOrder } from '../../actions';
+import { changeLoading, sagaSetOrdersData, setSelectedOrder } from '../../actions';
 import SentOrders from './sent_orders';
 import ErrorPage from './errors';
 import '../../app.css';

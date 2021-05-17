@@ -1,7 +1,7 @@
 .orders-selector {
     margin-top: 1em;
     width: 100%;
-    height: 5em;
+    height: 81px;
     background: #F2F2F2 0% 0% no-repeat padding-box;
     opacity: 1;
     position: relative;
@@ -44,7 +44,7 @@
     align-items: center;
     vertical-align: middle;
     width: 100%;
-    height: 41pt;
+    height: 41px;
     position: relative;
     margin-top: .1em;
     background: #7D869A 0% 0% no-repeat padding-box;
@@ -104,8 +104,8 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    font: normal normal 600 16pt/22pt Open Sans;
-    line-height: 41pt;
+    font: normal normal 600 16px/22px Open Sans;
+    line-height: 41px;
     letter-spacing: 0pt;
     color: #FFFFFF;
     opacity: 1;
@@ -115,6 +115,7 @@
     width: 100%;
     border-bottom: 1pt solid #D8D8D8;
     opacity: 1; ;
+    height: 25px;
 }
 
 .orders-header div {
@@ -123,6 +124,7 @@
     text-align: left;
     font: normal normal normal 10pt/11pt Arial;
     letter-spacing: 0pt;
+    overflow: hidden;
     color: #444444;
     opacity: 1;
 }
@@ -145,6 +147,7 @@
 
 .order-wrapper {
     padding: 1em 0;
+    height: 70px;
     display: flex;
     border-bottom: 1pt solid #95989A;
     align-items: center;
@@ -152,12 +155,14 @@
 }
 
 .order-wrapper div {
-    display: inline-flex;
     text-align: left;
     font: normal normal normal 14pt/26pt Open Sans;
     letter-spacing: 0px;
     color: #333333;
     opacity: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     /* line-height: 22pt; */
 }
 
