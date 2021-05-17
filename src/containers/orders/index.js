@@ -4,6 +4,7 @@ import './orders.css';
 import { changeLoading, sagaSetOrdersData, setOrdersData, setSelectedOrder } from '../../actions';
 import SentOrders from './sent_orders';
 import ErrorPage from './errors';
+import '../../app.css';
 
 class Orders extends React.Component {
     constructor(props) {

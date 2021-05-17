@@ -1,14 +1,12 @@
 import React from 'react';
-import { SAGA_SET_HEADER_DATA, SET_HEADER_DATA } from '../../constants';
 import { connect } from 'react-redux';
-import { AiOutlineStar, AiOutlineMail } from 'react-icons/ai';
-import { FiUser, FiSmartphone, FiHome } from 'react-icons/fi';
+import { AiOutlineStar } from 'react-icons/ai';
+import { FiUser, FiSmartphone } from 'react-icons/fi';
 import { HiOutlineAtSymbol, HiOutlineOfficeBuilding } from 'react-icons/hi'
 import { VscHome } from 'react-icons/vsc'
 import './header.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
-import axios from 'axios';
 import { sagaSetHeaderData } from '../../actions';
 import '../../app.css';
 
