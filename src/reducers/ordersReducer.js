@@ -6,6 +6,7 @@ import {
     SET_ORDERS_C,
     SET_ORDER_DATA,
     SET_SELECTED_ORDER,
+    CHANGE_LOADING,
 } from '../constants'
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
         orders_C: [],
     },
     selectedOrder: 'orders_AAA',
+    loading: true,
 }
 
 const ordersReducer = (state = initialState, action) => {
@@ -25,6 +27,8 @@ const ordersReducer = (state = initialState, action) => {
             return { ...state, orders: action.payload };
         case SET_SELECTED_ORDER:
             return { ...state, selectedOrder: action.payload };
+        case CHANGE_LOADING:
+            return { ...state, loading: action.payload };
         //cases for specific orders if needed
         case SET_ORDERS_A:
             return state.orders.orders_A = action.payload;

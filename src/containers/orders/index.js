@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './orders.css';
-import { sagaSetOrdersData, setOrdersData, setSelectedOrder } from '../../actions';
+import { changeLoading, sagaSetOrdersData, setOrdersData, setSelectedOrder } from '../../actions';
 import SentOrders from './sent_orders';
 import ErrorPage from './errors';
 
@@ -14,8 +14,12 @@ class Orders extends React.Component {
         };
     }
 
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     componentDidMount = () => {
-        console.log('setting orders data');
+        //setting orders data to view
         this.props.sagaSetOrdersData();
     }
 
@@ -29,6 +33,10 @@ class Orders extends React.Component {
             sentSelected: true,
         });
         if (button == 'ERRORS') this.setState({ sentSelected: false });
+        this.sleep(2000).then(() => {
+            //delay for the loader
+            this.props.changeLoading(false)
+        })
     }
 
     render() {
@@ -60,6 +68,9 @@ class Orders extends React.Component {
                     </div>
                 </div>
                 <div className='orders-toolbar'>
+                    <div className='recent-orders'>
+                        RECENT ORDERS
+                    </div>
                     <div className='sent-errors-buttons'>
                         <div style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
                             <input
@@ -75,9 +86,6 @@ class Orders extends React.Component {
                                 onClick={(e) => this.selectSentErrorButton(e.target.value)}
                             />
                         </div>
-                    </div>
-                    <div className='recent-orders'>
-                        RECENT ORDERS
                     </div>
                 </div>
                 <div className='selected-orders'>
@@ -103,7 +111,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
         sagaSetOrdersData: (data) => dispatch(sagaSetOrdersData(data)),
-        setSelectedOrder: (order) => dispatch(setSelectedOrder(order))
+        setSelectedOrder: (order) => dispatch(setSelectedOrder(order)),
+        changeLoading: (bool) => dispatch(changeLoading(bool)),
     }
 }
 

@@ -10,6 +10,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 import axios from 'axios';
 import { sagaSetHeaderData } from '../../actions';
+import '../../app.css';
 
 class Header extends React.Component {
 

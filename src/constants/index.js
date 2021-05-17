@@ -23,5 +23,6 @@ export const SET_ORDERS_B = 'SET_ORDERS_B';
 export const SET_ORDERS_C = 'SET_ORDERS_C';
 export const SAGA_SET_ORDERS_DATA = 'SAGA_SET_ORDERS_DATA';
 export const SET_SELECTED_ORDER = 'SET_SELECTED_ORDER';
+export const CHANGE_LOADING = 'CHANGE_LOADING';
 
 export const SET_ORDER_DATA = 'SET_ORDER_DATA';

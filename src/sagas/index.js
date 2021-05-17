@@ -1,4 +1,4 @@
-import { call, put, all, takeEvery } from 'redux-saga/effects';
+import { put, all, takeEvery } from 'redux-saga/effects';
 import { setHeaderData, setOrdersData } from '../actions';
 import axios from 'axios';
 import {
