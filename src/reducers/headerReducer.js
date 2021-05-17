@@ -1,16 +1,4 @@
 import {
-    SET_FIRST_NAME,
-    SET_LAST_NAME,
-    SET_SEX,
-    SET_AGE,
-    SET_USER_ID,
-    SET_MOBILE_NUMBER,
-    SET_HOME_NUMBER,
-    SET_EMAIL_ADDRESS,
-    SET_SMS_NUM,
-    SET_EMAILS_NUM,
-    SET_ORDERS_NUM,
-    SET_SMS_STATUS,
     SET_HEADER_DATA,
 } from '../constants'
 

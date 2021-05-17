@@ -32,7 +32,7 @@ class SentOrders extends React.Component {
         return (
             <div>
                 {
-                    orders[selectedOrder].length != 0 || orders[selectedOrder].sent
+                    orders[selectedOrder].length !== 0 || orders[selectedOrder].sent
                         ? <div className='orders-header'>
                             <div className='date-n-time'>DATE & TIME</div>
                             <div className='subject'>SUBJECT</div>
@@ -42,13 +42,14 @@ class SentOrders extends React.Component {
                         : ''
                 }
                 {
-                    orders[selectedOrder].length != 0 || orders[selectedOrder].sent
+                    orders[selectedOrder].length !== 0 || orders[selectedOrder].sent
                         ? orders[selectedOrder].sent.map((obj, index) => {
                             return (
                                 <div
+                                    key={index}
                                     className='order-wrapper'
                                     style={
-                                        index % 2 == 1
+                                        index % 2 === 1
                                             ? { background: '#F2F4F7 0% 0% no-repeat padding-box', opacity: '1' }
                                             : { background: '' }
                                     }

@@ -33,7 +33,7 @@ class Orders extends React.Component {
             selectedSentErrorButton: button,
             sentSelected: true,
         });
-        if (button == 'ERRORS') this.setState({ sentSelected: false });
+        if (button === 'ERRORS') this.setState({ sentSelected: false });
         this.sleep(2000).then(() => {
             //delay for the loader
             this.props.changeLoading(false)
@@ -56,6 +56,7 @@ class Orders extends React.Component {
                         {Object.keys(ordersObj).map(key => {
                             return (
                                 <button
+                                    key={key}
                                     id={key}
                                     className={key === selectedOrder ? 'selected orders-select-button' : 'orders-select-button'}
                                     onClick={(e) => {
@@ -76,13 +77,13 @@ class Orders extends React.Component {
                         <div style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
                             <input
                                 type='Submit'
-                                value="SENT"
+                                defaultValue="SENT"
                                 className={this.state.sentSelected ? 'selected sent-errors' : 'sent-errors'}
                                 onClick={(e) => this.selectSentErrorButton(e.target.value)}
                             />
                             <input
                                 type='Submit'
-                                value='ERRORS'
+                                defaultValue='ERRORS'
                                 className={!this.state.sentSelected ? 'selected sent-errors' : 'sent-errors'}
                                 onClick={(e) => this.selectSentErrorButton(e.target.value)}
                             />

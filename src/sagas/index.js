@@ -4,7 +4,6 @@ import axios from 'axios';
 import {
     SAGA_SET_HEADER_DATA,
     SAGA_SET_ORDERS_DATA,
-    SET_HEADER_DATA,
 } from "../constants";
 
 

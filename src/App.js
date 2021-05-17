@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 import Header from './components/header'
 import Orders from './components/orders'
 import Overlay from './components/overlay'
@@ -10,12 +9,16 @@ class App extends React.Component {
 
   render() {
 
+    const blurredStyle = this.props.overlay
+      ? { filter: 'blur(10px)' }
+      : { filter: '' }
+
     return (
-      <div className="App" style={{ padding: '1vw' }}>
+      <div className="App" style={{ padding: '15px' }}>
         {this.props.overlay ? <Overlay /> : ''}
         <div
           className='main-page'
-          style={this.props.overlay ? { filter: 'blur(10px)' } : { filter: '' }}
+          style={blurredStyle}
         >
           <Header className='header' />
           <Orders className='orders' />

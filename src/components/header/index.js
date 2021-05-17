@@ -56,7 +56,7 @@ class Header extends React.Component {
                     </div>
                     <div className='user-info-wrapper'>
                         <div className='user-profile'>
-                            <FiUser size='6em' color='#FFFFFF' className='user-icon' />
+                            <FiUser size='70px' color='#FFFFFF' className='user-icon' />
                             <span className='user-text'>{header.gender.toUpperCase()} - {this.getAge(header.birth_date)}</span>
                         </div>
                         <div className='user-details'>
@@ -66,7 +66,11 @@ class Header extends React.Component {
                                     <p>#{header.id}</p>
                                 </div>
                                 <div>
-                                    <FiSmartphone size='1.0em' color='#B0C6D8' className='user-details-icon' />
+                                    <FiSmartphone
+                                        size='1.0em'
+                                        color='#B0C6D8'
+                                        id='mobile-phone-number'
+                                        className='user-details-icon' />
                                     <p>{header.mobile_phone}</p>
                                 </div>
                                 <div>

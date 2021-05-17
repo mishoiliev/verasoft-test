@@ -20,7 +20,7 @@ class Overlay extends React.Component {
                 >
                     <AiOutlineClose
                         color='white'
-                        size='50px'
+                        size='35px'
                     />
                 </button>
                 <div className='overlay-loader-wrapper'>
